@@ -97,7 +97,8 @@ public class Vezba {
 		btnOk.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (textField.getText().isEmpty() || textField_1.getText().isEmpty()) {
-					JOptionPane.showMessageDialog("frame", "Unesite vrednosti za Username i Password", "Greska", JOptionPane.ERROR_MESSAGE)
+					JOptionPane.showMessageDialog("frame", "Unesite vrednosti za Username i Password", "Greska", 
+							JOptionPane.ERROR_MESSAGE);
 				}
 			}
 		}};
