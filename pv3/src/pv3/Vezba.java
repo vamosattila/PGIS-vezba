@@ -5,6 +5,8 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import java.awt.GridBagLayout;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.GridBagConstraints;
 import javax.swing.JTextField;
 import java.awt.Insets;
@@ -92,6 +94,13 @@ public class Vezba {
 		gbc_btnOk.gridx = 2;
 		gbc_btnOk.gridy = 5;
 		frame.getContentPane().add(btnOk, gbc_btnOk);
+		btnOk.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (textField.getText().isEmpty() || textField_1.getText().isEmpty()) {
+					JOptionPane.showMessageDialog("frame", "Unesite vrednosti za Username i Password", "Greska", JOptionPane.ERROR_MESSAGE)
+				}
+			}
+		}};
 	}
 
 }
